@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context=".ServiceViewActivity">
+
+    <EditText
+        android:id="@+id/productNameText"
+        android:layout_width="208dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pnameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <TextView
+        android:id="@+id/descriptionLabel2"
+        android:layout_width="96dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:text="Description:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pnameLabel" />
+
+    <TextView
+        android:id="@+id/priceLabel"
+        android:layout_width="96dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="56dp"
+        android:gravity="right"
+        android:text="Price:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLabel2" />
+
+    <TextView
+        android:id="@+id/quantityLabel"
+        android:layout_width="95dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:gravity="left"
+        android:text="Start Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceLabel" />
+
+    <TextView
+        android:id="@+id/quantityLabel3"
+        android:layout_width="95dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:text="Date:"
+        app:layout_constraintStart_toEndOf="@+id/quantityLabel"
+        app:layout_constraintTop_toBottomOf="@+id/priceText" />
+
+    <TextView
+        android:id="@+id/pnameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="9dp"
+        android:text="Product Name:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="206dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/descriptionLabel2"
+        app:layout_constraintTop_toBottomOf="@+id/productNameText" />
+
+    <DatePicker
+        android:id="@+id/dayOfPicker"
+        android:layout_width="281dp"
+        android:layout_height="356dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="4"
+        android:calendarViewShown="true"
+        android:scaleX="0.80"
+        android:scaleY="0.80"
+        android:spinnersShown="true"
+        app:layout_constraintStart_toEndOf="@+id/purchaseButton"
+        app:layout_constraintTop_toBottomOf="@+id/priceText" />
+
+    <TimePicker
+        android:id="@+id/startTimePicker"
+        android:layout_width="261dp"
+        android:layout_height="358dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginRight="196dp"
+        android:scaleX="0.50"
+        android:scaleY="0.50"
+        android:timePickerMode="clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/priceLabel"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/purchaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:onClick="onClick"
+        android:text="Purchase"
+        app:layout_constraintEnd_toStartOf="@+id/date_picker"
+        app:layout_constraintTop_toBottomOf="@+id/startTimePicker" />
+
+    <EditText
+        android:id="@+id/priceText"
+        android:layout_width="208dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/priceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="288dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:gravity="center"
+        android:text="Service Page"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

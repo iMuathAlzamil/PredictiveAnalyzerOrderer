@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="pnameLabel" type="id" />
+    <item name="itemName" type="id" />
+    <item name="priceLabel" type="id" />
+    <item name="descriptionText" type="id" />
+    <item name="descriptionLabel2" type="id" />
+    <item name="quantityLabel" type="id" />
+    <item name="priceText" type="id" />
+    <item name="productNameText" type="id" />
+    <item name="quantityText" type="id" />
+    <item name="purchaseButton" type="id" />
+    <item name="PromotionDetailsText" type="id" />
+    <item name="PromotionsTitleLabel" type="id" />
+</resources>
